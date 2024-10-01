@@ -1,0 +1,186 @@
+<!--Mary Rithika Reddy Gade 
+   G01460702
+   SWE 645 ASSIGNMENT 1  // -->
+
+<!--Student Survey Form -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Survey Form</title>
+      <!-- Linking Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Internal CSS Styles -->
+    <style>
+        body {
+            font-family:'Times New Roman'
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            background-image: url('gmu.jpg');
+            background-size: cover;
+            background: linear-gradient(to right, gold, green); /* Gradient background with gold and green colors */
+            padding: 20px; /* Padding for the entire body */
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid green; /* Adding green border */
+        }
+        
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body> <!-- Header -->
+    <h2>Student Survey Form</h2>
+     <!-- Survey Form -->
+    <form>
+      <!-- First Name Input -->
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your first name" required>
+      </div>
+      <!-- Last Name Input -->
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" class="form-control" id="lastName" name="lastName" placeholder=" Enter your last name " required>
+      </div>
+      <!-- Gnumber Input -->
+      <div class="form-group">
+        <label for="firstName">Gnumber:</label>
+        <input type="text" class="form-control" id="Gnumber" name="Gnumber" required>
+      </div>
+      <!-- Street Address Input -->
+      <div class="form-group">
+        <label for="streetAddress">Street Address:</label>
+        <input type="text" class="form-control" id="streetAddress" name="streetAddress" required>
+      </div>
+      <!-- City Input -->
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" class="form-control" id="city" name="city" required>
+      </div>
+      <!-- State Input -->
+      <div class="form-group">
+        <label for="state">State:</label>
+        <input type="text" class="form-control" id="state" name="state" required>
+      </div>
+       <!-- ZIP Input -->
+      <div class="form-group">
+        <label for="zip">ZIP:</label>
+        <input type="text" class="form-control" id="zip" name="zip" required>
+      </div>
+      <!-- Telephone Number Input -->
+      <div class="form-group">
+        <label for="telephone">Telephone Number:</label>
+        <input type="tel" class="form-control" id="telephone" name="telephone" required>
+      </div>
+      <!-- Email Input -->
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+       <!-- URL Input -->
+      <div class="form-group">
+        <label for="url">URL:</label>
+        <input type="url" class="form-control" id="url" name="url"placeholder="https://www.gmu.edu/" required>
+      </div>
+      <!-- Date of Survey Input -->
+      <div class="form-group">
+        <label for="date">Date of Survey:</label>
+        <input type="date" class="form-control" id="date" name="date" required>
+      </div>
+        <!-- Liked Most about Campus Checkboxes -->
+        <label>What did you like most about the campus?</label><br>
+        <input type="checkbox" id="students" name="likedMost[]" value="students">
+        <label for="students">Students</label><br>
+        <input type="checkbox" id="location" name="likedMost[]" value="location">
+        <label for="location">Location</label><br>
+        <input type="checkbox" id="campus" name="likedMost[]" value="campus">
+        <label for="campus">Campus</label><br>
+        <input type="checkbox" id="atmosphere" name="likedMost[]" value="atmosphere">
+        <label for="atmosphere">Atmosphere</label><br>
+        <input type="checkbox" id="dormRooms" name="likedMost[]" value="dorm rooms">
+        <label for="dormRooms">Dorm Rooms</label><br>
+        <input type="checkbox" id="sports" name="likedMost[]" value="sports">
+        <label for="sports">Sports</label><br>
+       <!-- Radio Inputs for How Become Interested -->
+        <label>How did you become interested in the university?</label><br>
+        <input type="radio" id="friends" name="interest" value="friends">
+        <label for="friends">Friends</label><br>
+        <input type="radio" id="television" name="interest" value="television">
+        <label for="television">Television</label><br>
+        <input type="radio" id="internet" name="interest" value="internet">
+        <label for="internet">Internet</label><br>
+        <input type="radio" id="other" name="interest" value="other">
+        <label for="other">Other</label><br>
+       <!-- Dropdown for Likelihood of Recommending -->
+        <label for="recommendation">Likelihood of Recommending:</label>
+        <select id="recommendation" name="recommendation">
+            <option value="Very Likely">Very Likely</option>
+            <option value="Likely">Likely</option>
+            <option value="Unlikely">Unlikely</option>
+        </select><br>
+      <!-- Raffle Input -->
+        <label for="raffle">Raffle (Enter at least ten comma-separated numbers from 1 through 100):</label><br>
+        <input type="text" id="raffle" name="raffle" pattern="^(\d{1,2},){9}\d{1,2}$" required><br>
+      <!-- Additional Comments TextArea -->
+        <label for="comments">Additional Comments:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br>
+         <!-- Submit and Reset Buttons -->
+        <input type="submit" value="Submit">
+        <input type="reset" value="Cancel">
+    </form>
+</body>
+</html>
